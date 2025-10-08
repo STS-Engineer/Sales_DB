@@ -1,7 +1,7 @@
 from typing import Any, Dict
 from sqlalchemy import text
-from ..db import engine
-from ..config.columns import COLUMN_MAP
+from app.db import engine
+from app.config.columns import COLUMN_MAP
 
 def _q(ident: str) -> str:
     return '"' + ident.replace('"', '""') + '"'
