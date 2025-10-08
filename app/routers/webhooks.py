@@ -1,8 +1,8 @@
 import json
 from fastapi import APIRouter, Request, Header, HTTPException
-from ..settings import settings
-from ..services.monday import MondayClient, verify_signature_or_skip, ITEM_QUERY
-from ..services.ingest import build_row, insert_row
+from app.settings import settings
+from app.services.monday import MondayClient, verify_signature_or_skip, ITEM_QUERY
+from app.services.ingest import build_row, insert_row
 
 router = APIRouter(prefix="/webhooks", tags=["webhooks"])
 
